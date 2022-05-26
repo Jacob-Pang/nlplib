@@ -18,7 +18,7 @@ setup(
     ],
     include_package_data=True,
     install_requires=[
-        "pandas", "nltk", "numpy", "pytorch",
+        "pandas", "nltk", "numpy", "torch",
         "tensorflow", "tensorflow-text==2.8.*",
         "tf-models-official==2.7.0",
         "transformers", "tqdm"
