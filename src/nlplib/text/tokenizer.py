@@ -7,12 +7,12 @@ from nltk import tokenize
 from nltk.corpus import stopwords
 
 from .utility import apply_on_text_sequences
-from ..text import regex_patterns
 from .nltk_downloads import *
+from pyutils.regex import SINGLE_CHAR_ONLY
 
 class drop_token_cond:
     def single_char_only(token: str) -> bool:
-        return not (re.match(regex_patterns.single_char_only, token) is None)
+        return not (re.match(SINGLE_CHAR_ONLY, token) is None)
 
     def punctuation(token: str) -> bool:
         return token in string.punctuation
